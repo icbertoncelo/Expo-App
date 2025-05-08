@@ -11,7 +11,7 @@ export default function ImageViewer({
   selectedImage,
 }: ImageViewerProps) {
   const imageSource = selectedImage ? { uri: selectedImage } : imgSource;
-  
+
   return <Image source={imageSource} style={styles.image} />;
 }
 
