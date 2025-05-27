@@ -106,7 +106,7 @@ export default function Index() {
         <View style={styles.footerContainer}>
           <Button
             theme="primary"
-            label="Choose a photo"
+            label="Choose a photos"
             onPress={handlePickImageAsync}
           />
           <Button
