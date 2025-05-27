@@ -1,5 +1,4 @@
 import { Ionicons } from "@expo/vector-icons";
-import { OSNotification } from "react-native-onesignal";
 import {
   View,
   Text,
@@ -8,16 +7,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useRouter } from "expo-router";
-
-type AdditionalDataProps = {
-  additionalData: {
-    route?: string;
-    productId?: string;
-  };
-};
+import { NotificationData } from "@/dtos/notification";
 
 interface NotificationProps {
-  data: OSNotification & AdditionalDataProps;
+  data: NotificationData;
   onClose: () => void;
 }
 
@@ -26,7 +19,7 @@ export function Notification({ data, onClose }: NotificationProps) {
 
   function handleOnPress() {
     const { additionalData } = data;
-    if (additionalData.route && additionalData.productId) {
+    if (additionalData?.route && additionalData?.productId) {
       router.navigate({
         pathname: "/photos/[id]",
         params: {
@@ -34,7 +27,7 @@ export function Notification({ data, onClose }: NotificationProps) {
         },
       });
 
-      onClose()
+      onClose();
     }
   }
 
