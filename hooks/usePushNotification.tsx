@@ -33,10 +33,10 @@ export function usePushNotification() {
 
       const routeMap: Record<string, () => void> = {
         "see-by-id": () => {
-          if (additionalData?.productId) {
+          if (additionalData?.photoId) {
             router.navigate({
               pathname: "/photos/[id]",
-              params: { id: additionalData.productId },
+              params: { id: additionalData.photoId },
             });
           }
         },

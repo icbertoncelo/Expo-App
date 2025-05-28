@@ -86,9 +86,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.icbertoncelo.StickerSmash'
+    namespace 'com.icbertoncelo.stickersmash'
     defaultConfig {
-        applicationId 'com.icbertoncelo.StickerSmash'
+        applicationId 'com.icbertoncelo.stickersmash'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

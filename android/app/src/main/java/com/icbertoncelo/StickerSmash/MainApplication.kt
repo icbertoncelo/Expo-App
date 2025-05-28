@@ -1,4 +1,4 @@
-package com.icbertoncelo.StickerSmash
+package com.icbertoncelo.stickersmash
 
 import android.app.Application
 import android.content.res.Configuration

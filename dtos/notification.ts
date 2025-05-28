@@ -2,8 +2,7 @@ import { OSNotification } from "react-native-onesignal";
 
 interface AdditionalDataProps {
   additionalData?: {
-    route?: string;
-    productId?: string;
+    photoId?: string;
   };
 }
 

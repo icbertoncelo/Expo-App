@@ -27,6 +27,10 @@
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="myapp"/>
         <data android:scheme="com.icbertoncelo.StickerSmash"/>
+        <data android:scheme="StickerSmash"/>
+        <data android:scheme="exp+stickersmash"/>
+        <data android:scheme="stickersmash"/>
+        <data android:scheme="com.icbertoncelo.stickersmash"/>
       </intent-filter>
     </activity>
   </application>

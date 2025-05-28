@@ -6,7 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import { useRouter } from "expo-router";
+import * as Linking from "expo-linking";
 import { NotificationData } from "@/dtos/notification";
 
 interface NotificationProps {
@@ -15,18 +15,9 @@ interface NotificationProps {
 }
 
 export function Notification({ data, onClose }: NotificationProps) {
-  const router = useRouter();
-
-  function handleOnPress() {
-    const { additionalData } = data;
-    if (additionalData?.route && additionalData?.productId) {
-      router.navigate({
-        pathname: "/photos/[id]",
-        params: {
-          id: additionalData.productId,
-        },
-      });
-
+  async function handleOnPress() {
+    if (data.launchURL) {
+      Linking.openURL(data.launchURL).catch(err => console.error("Failed to open URL:", err));
       onClose();
     }
   }

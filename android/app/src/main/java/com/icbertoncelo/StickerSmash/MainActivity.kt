@@ -1,4 +1,4 @@
-package com.icbertoncelo.StickerSmash
+package com.icbertoncelo.stickersmash
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

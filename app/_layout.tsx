@@ -3,6 +3,8 @@ import { usePushNotification } from "@/hooks/usePushNotification";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
+// DEEP LINKING StickerSmash://photos/{photoId}
+
 export default function RootLayout() {
   const { notification, setNotification } = usePushNotification();
 

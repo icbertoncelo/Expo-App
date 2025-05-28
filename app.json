@@ -1,22 +1,22 @@
 {
   "expo": {
-    "name": "StickerSmash",
-    "slug": "StickerSmash",
+    "name": "stickersmash",
+    "slug": "stickersmash",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "stickersmash",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.icbertoncelo.StickerSmash"
+      "bundleIdentifier": "com.icbertoncelo.stickersmash"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.icbertoncelo.StickerSmash"
+      "package": "com.icbertoncelo.stickersmash"
     },
     "web": {
       "bundler": "metro",
