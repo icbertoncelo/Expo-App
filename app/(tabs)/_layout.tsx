@@ -1,7 +1,10 @@
 import { Tabs } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import usePhotos from "@/hooks/usePhotos";
 
 export default function TabLayout() {
+  const { photosCount } = usePhotos();
+
   return (
     <Tabs
       screenOptions={{
@@ -33,11 +36,10 @@ export default function TabLayout() {
         name="photos"
         options={{
           title: "Photos",
+          tabBarBadge: photosCount > 0 ? photosCount : undefined,
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={
-                focused ? "images" : "image-outline"
-              }
+              name={focused ? "images" : "image-outline"}
               color={color}
               size={24}
             />

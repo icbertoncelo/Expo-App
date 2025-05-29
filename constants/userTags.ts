@@ -1,0 +1,1 @@
+export const PHOTOS_COUNT_TAG = 'photos_items_count'

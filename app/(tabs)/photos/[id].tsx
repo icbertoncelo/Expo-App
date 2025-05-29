@@ -6,7 +6,7 @@ export default function PhotoScreen() {
 
   return (
     <View style={styles.container}>
-      <Text>Photo with ID {id}</Text>
+      <Text style={styles.text}>Photo with ID {id}</Text>
     </View>
   );
 }
@@ -14,7 +14,11 @@ export default function PhotoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignContent: "center",
+    backgroundColor: "#25292e",
+    alignItems: "center",
+  },
+  text: {
+    color: "#fff",
+    fontSize: 18,
   },
 });

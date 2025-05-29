@@ -1,4 +1,5 @@
 import { Notification } from "@/components/Notification";
+import PhotosListProvider from "@/contexts/PhotosListContext";
 import { usePushNotification } from "@/hooks/usePushNotification";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -16,10 +17,12 @@ export default function RootLayout() {
           onClose={() => setNotification(null)}
         />
       )}
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <PhotosListProvider>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+      </PhotosListProvider>
       <StatusBar style="light" />
     </>
   );
